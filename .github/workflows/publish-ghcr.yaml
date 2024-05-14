@@ -13,3 +13,5 @@ jobs:
           docker login --username Davlany --password ${{ secrets.TOKKEN }} ghcr.io 
           docker build . --tag ghcr.io/davlany/docktest:latest 
           docker push ghcr.io/davlany/docktest:latest
+      - name: Run the container
+        run: docker run ghcr.io/davlany/docktest:latest
